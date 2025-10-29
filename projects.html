@@ -24,17 +24,13 @@
     <body>
         <header>
             <nav>
-                <!-- 
-                    I'm imagining this will be in some kind of header bar up 
-                    top after applying CSS, so including a link to this page
-                    makes sense since this should stay the same across pages
-                -->
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./projects.html" class="active">Projects</a></li>
                     <li><a href="./contact.html">Contact Me</a></li>
                     <li><a href="./experiments.html">Experimental!?</a></li>
-                    <li style="float: right;">Settings</li>
+                    <li id="list-nav"><a>Settings</a></li>
+                    <li id="top-nav" style="float: right;"><a><img src="./media/img/svg/settings.svg" class="svg-white" onclick="alert('not implemented yet, waiting for JS')"></a></li>
                 </ul>
             </nav>
         </header>
@@ -226,6 +222,25 @@
                     </labeled-image>
                 </article>
             </section>
+
+            <script>
+                function findBadAncestors(el) {
+                const bad = [];
+                let cur = el.parentElement;
+                while (cur) {
+                    const style = getComputedStyle(cur);
+                    if (/(hidden|auto|scroll)/.test(style.overflow + style.overflowY + style.overflowX)) {
+                    bad.push({el: cur, reason: 'overflow: ' + (style.overflow || style.overflowY || style.overflowX)});
+                    }
+                    if (style.transform !== 'none' || style.perspective !== 'none' || style.willChange.includes('transform')) {
+                    bad.push({el: cur, reason: 'transform/perspective/will-change'});
+                    }
+                    cur = cur.parentElement;
+                }
+                return bad;
+                }
+                console.log(findBadAncestors(document.querySelector('nav')));
+            </script>
         </main>
         <footer>
             <small>

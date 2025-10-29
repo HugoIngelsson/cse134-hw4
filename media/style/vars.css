@@ -1,0 +1,12 @@
+:root {
+    --nav-background: #abc;
+    --nav-item: #123;
+    --nav-selected: #246;
+    --nav-hover: rgb(62, 108, 154);
+    --nav-font-color: #f66;
+    --nav-height: 3rem;
+    --nav-items: 5;
+    --nav-font-size: 1.2em;
+
+    --body-primary: #000;
+}

@@ -5,24 +5,19 @@
         <meta name="description" content="A place where people can contact me">
         <link rel="icon" type="image/x-icon" href="./media/favicon/favicon-32x32.png">
         <title>Hugo Ingelsson's Portfolio Site - Contact Me</title>
+        <link rel="stylesheet" href="./media/style/main.css">
     </head>
     <body>
         <header>
             <nav>
-                <!-- 
-                    I'm imagining this will be in some kind of header bar up 
-                    top after applying CSS, so including a link to this page
-                    makes sense since this should stay the same across pages
-                -->
-                <details>
-                    <summary>Navigate my site!</summary>
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./projects.html">Projects</a></li>
-                        <li><a href="./contact.html">Contact Me</a></li>
-                        <li><a href="./experiments.html">Experimental!?</a></li>
-                    </ul>
-                </details>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./contact.html" class="active">Contact Me</a></li>
+                    <li><a href="./experiments.html">Experimental!?</a></li>
+                    <li id="list-nav"><a>Settings</a></li>
+                    <li id="top-nav" style="float: right;"><a><img src="./media/img/svg/settings.svg" class="svg-white" onclick="alert('not implemented yet, waiting for JS')"></a></li>
+                </ul>
             </nav>
         </header>
         <main>
