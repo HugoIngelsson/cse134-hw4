@@ -6,20 +6,6 @@
         <link rel="icon" type="image/x-icon" href="./media/favicon/favicon-32x32.png">
         <title>Hugo Ingelsson's Portfolio Site - Projects</title>
         <link rel="stylesheet" href="./media/style/main.css">
-
-        <style>
-            labeled-image {
-                display: block;
-                margin-left: 40px;
-
-                font-style: italic;
-                font-size: 0.9rem;
-            }
-
-            labeled-image img {
-                width: 50%;
-            }
-        </style>
     </head>
     <body>
         <header>
@@ -42,40 +28,46 @@
                 <h2>Coding Projects</h2>
                 <p>These are particularly projects that I've coded up.</p>
                 <article>
-                    <h3>Gameboy Emulator</h3>
-                    <p>
-                        I made a <a href="">Gameboy Emulator</a> towards the end of last summer. 
-                        I think I learned a <em>bunch</em> from the project, and it's a great
-                        project to show off.
-                    </p>
-                    <labeled-image>
-                        <picture>
-                            <source type="image/avif" srcset="./media/img/avif/gameboy_start.avif" width="500">
-                            <img src="./media/img/png/gameboy_start.png" alt="Gameboy start screen" width="500">
-                        </picture><br>
-                        The startup screen for Game Boy Color running in my emulator
-                    </labeled-image>
-                    <p>
-                        Ultimately, it boiled down to painstakingly reading through every detail 
-                        on how the Game Boy works, which was pretty much only possible due to 
-                        <a href="https://gbdev.io/pandocs/">PanDocs</a>. I implemented every 
-                        OP-code, every quirk with the PPU (pixel-processing unit), every 
-                        timing between PPU and CPU. Slowly but surely, I made it into a 
-                        working machine, until it was finally done.
-                    </p>
-                    <p>
-                        The feeling of seeing the startup screen work for the first time is 
-                        like no other. It really is a special kind of magic to have worked 
-                        so close to the computer-level functionality of a device and then 
-                        have it function.
-                    </p>
-                    <labeled-image>
-                        <picture>
-                            <source type="image/avif" srcset="./media/img/avif/pk_gold.avif">
-                            <img src="./media/img/png/pk_gold.png" alt="Pokemon Gold">
-                        </picture><br>
-                        The home screen for Pokemon Gold running in my emulator
-                    </labeled-image>
+                    <sliding-container class="no-image from-left">
+                        <h3>Gameboy Emulator</h3>
+                        <p>
+                            I made a <a href="">Gameboy Emulator</a> towards the end of last summer. 
+                            I think I learned a <em>bunch</em> from the project, and it's a great
+                            project to show off.
+                        </p>
+                    </sliding-container>
+                    <sliding-container class="from-right">
+                        <labeled-image class="tilt-left">
+                            <picture>
+                                <source type="image/avif" srcset="./media/img/avif/gameboy_start.avif" width="500">
+                                <img src="./media/img/png/gameboy_start.png" alt="Gameboy start screen" width="500">
+                            </picture><br>
+                            <!-- The startup screen for Game Boy Color running in my emulator -->
+                        </labeled-image>
+                        <p>
+                            Ultimately, it boiled down to painstakingly reading through every detail 
+                            on how the Game Boy works, which was pretty much only possible due to 
+                            <a href="https://gbdev.io/pandocs/">PanDocs</a>. I implemented every 
+                            OP-code, every quirk with the PPU (pixel-processing unit), every 
+                            timing between PPU and CPU. Slowly but surely, I made it into a 
+                            working machine, until it was finally done.
+                        </p>
+                    </sliding-container>
+                    <sliding-container class="from-left">
+                        <p>
+                            The feeling of seeing the startup screen work for the first time is 
+                            like no other. It really is a special kind of magic to have worked 
+                            so close to the computer-level functionality of a device and then 
+                            have it function.
+                        </p>
+                        <labeled-image class="tilt-right">
+                            <picture>
+                                <source type="image/avif" srcset="./media/img/avif/pk_gold.avif">
+                                <img src="./media/img/png/pk_gold.png" alt="Pokemon Gold">
+                            </picture><br>
+                            <!-- The home screen for Pokemon Gold running in my emulator -->
+                        </labeled-image>
+                    </sliding-container>
                 </article>
     
                 <article>
@@ -123,9 +115,9 @@
                         You can try out the app <a href="https://cse110-sp25-group29.github.io/cse110-sp25-group29/source/assets/homepage.html">here</a>,
                         or you can use it directly below in this interactive <code>&lt;iframe&gt;</code>:
                     </p>
-                    <iframe id="concard-iframe" title="Inline Concard" width="1000" height="780"
+                    <!-- <iframe id="concard-iframe" title="Inline Concard" width="1000" height="780"
                         src="https://cse110-sp25-group29.github.io/cse110-sp25-group29/source/assets/editor-page.html">
-                    </iframe>
+                    </iframe> -->
                 </article>
             </section>
             <section id="competitions">
@@ -222,25 +214,6 @@
                     </labeled-image>
                 </article>
             </section>
-
-            <script>
-                function findBadAncestors(el) {
-                const bad = [];
-                let cur = el.parentElement;
-                while (cur) {
-                    const style = getComputedStyle(cur);
-                    if (/(hidden|auto|scroll)/.test(style.overflow + style.overflowY + style.overflowX)) {
-                    bad.push({el: cur, reason: 'overflow: ' + (style.overflow || style.overflowY || style.overflowX)});
-                    }
-                    if (style.transform !== 'none' || style.perspective !== 'none' || style.willChange.includes('transform')) {
-                    bad.push({el: cur, reason: 'transform/perspective/will-change'});
-                    }
-                    cur = cur.parentElement;
-                }
-                return bad;
-                }
-                console.log(findBadAncestors(document.querySelector('nav')));
-            </script>
         </main>
         <footer>
             <small>
