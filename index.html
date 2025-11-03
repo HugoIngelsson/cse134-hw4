@@ -22,32 +22,114 @@
             </nav>
         </header>
         <main>
-            <h1><hello-world>Hello</hello-world>, welcome to my website!</h1>
-            <svg width="400px" height="200px">
-                <rect width="100%" height="100%" fill="#f8f8f8" />
-                <circle cx="200" cy="90" r="75" stroke="#000000" fill="yellow"></circle>
-                <circle cx="170" cy="70" r="7" stroke="#000000" fill="#000000"></circle>
-                <circle cx="230" cy="70" r="7" stroke="#000000" fill="#000000"></circle>
-                <path d="M 170 110 A 40 40 0 0 0 230 110" stroke="black" fill="none"/>
-            </svg>
+            <sliding-container class="no-image in-right out-left">
+            <h1>Hello, I'm Hugo!</h1>
+            </sliding-container>
+            <picture>
+                <source type="image/avif" srcset="./media/img/avif/me.avif" width="500">
+                <img src="./media/img/png/me.png" alt="A picture of me and my beautiful dog, Stella, lying on my bed." width="500">
+            </picture>
             <section>
-                <h2>Who am I?</h2>
-                <p>
-                    Hello, I'm Hugo! I'm a Computer Science + Applied Math double major 
-                    at the University of California, San Diego. I'm currently a junior and
-                    am slated to graduate Spring 2027.
-                </p>
-                <label for="graduation">Progress towards graduation:</label>
-                <progress id="graduation" max="100" value="60"></progress>
-                <p>
-                    This is a website I made to show off some cools things I've made. 
-                    I'd recommend going through the site in this order:
-                </p>
-                <ol>
-                    <li>Take a look at some <a href="./projects.html">projects</a> I've made</li>
-                    <li>Play around with this <a href="./experiments.html">experimental</a> page</li>
-                    <li>Get in <a href="./contact.html">touch</a> with me!</li>
-                </ol>
+                <sliding-container class="no-image in-left out-left">
+                    <h2>Who are you?</h2>
+                </sliding-container>
+                <sliding-container class="no-image in-right out-right">
+                    <p>
+                        Well, I'm Hugo! I'm a Computer Science + Applied Math double major 
+                        at the University of California, San Diego. I'm currently a junior and
+                        am slated to graduate Spring 2027. I love problem solving and coming 
+                        up with innovative solutions.
+                    </p>
+                </sliding-container>
+                <sliding-container class="no-image in-left out-left">
+                    <h2>Right, but who are you <em>really?</em></h2>
+                </sliding-container>
+                <sliding-container class="no-image in-right out-right">
+                    <p>
+                        Sure, sure, maybe this isn't the greatest characterization of who I am.
+                    </p>
+                </sliding-container>
+                <sliding-container class="no-image in-right out-right">
+                    <p>
+                        Who I am really depends on who <em>you</em> are. I can be a great thinker
+                        and engineer, but I can also be a brother, son, friend, and many other things.
+                    </p>
+                </sliding-container>
+                <sliding-container class="no-image in-right out-right">
+                    <p>
+                        If you're visiting this site, odds are it's because you're looking to 
+                        hire me or get to know my technical skills. For that, I've made a whole
+                        other page with great info, which you can find <a href="./projects.html">here</a>.
+                    </p>
+                </sliding-container>
+                <sliding-container class="no-image in-left out-left">
+                    <h2>What about outside of that?</h2>
+                </sliding-container>
+                <sliding-container class="no-image in-right out-right">
+                    <p>
+                        Getting to know me will take more than an intro website, but I'll do my best to
+                        share as much as I can. If you really want to get to know me, fill in the form
+                        <a href="./contact.html">here</a> and I'll get in touch.
+                    </p>
+                </sliding-container>
+                <sliding-container class="in-right out-right">
+                    <hgroup>
+                        <h3>Some basics</h3>
+                        <p>
+                            I was born in Sweden and lived there half of my life. I still visit pretty
+                            much every summer, and I speak Swedish fluently. In fact, I still have a 
+                            summer house there, which I love to visit. It's got beautiful nature surrounding
+                            it, some much needed greenery compared to California.
+                        </p>
+                        <p>
+                            I moved to California when I was 11. My dad had gotten a job as a professor
+                            at Stanford, and so we took the chance and moved. It was tough at first, learning
+                            a new language and all, but I've grown to love it here. The people are kind, and 
+                            the weather is amazing.
+                        </p>
+                        <p>
+                            I've now moved from the Bay to study at UCSD. Truthfully, it's very similar
+                            to NorCal in a lot of ways, but still meaningfully different in others. Something
+                            I never knew I missed out on living in the Bay is the beauty of a sunset on the
+                            horizon of the water.
+                        </p>
+                    </hgroup>
+                    <labeled-image class="tilt-right" tabindex="-1" id="jarvsoo-img">
+                        <picture>
+                            <source type="image/avif" srcset="./media/img/avif/jarvsoo.avif" width="500">
+                            <img src="./media/img/png/jarvsoo.png" alt="A picture looking out at a lake 
+                                with a large tree in the foreground" width="500">
+                        </picture><br>
+                        <figcaption>My summer house in Sweden</figcaption>
+                    </labeled-image>
+                </sliding-container>
+                <sliding-container class="in-right out-right">
+                    <labeled-image class="tilt-left" tabindex="-1" id="dnd-img">
+                        <picture>
+                            <source type="image/avif" srcset="./media/img/avif/dnd_600x600.avif" width="500">
+                            <img src="./media/img/png/dnd_600x600.png" alt="A picture of seven people, with me
+                                second furthest right" width="500">
+                        </picture><br>
+                        <figcaption>The people I play D&D with</figcaption>
+                    </labeled-image>
+                    <hgroup>
+                        <h3>So what do you do outside of class?</h3>
+                        <p>
+                            I love to play games, particularly puzzle games. I haven't really found
+                            time to play much at college, but this is something I find time to do
+                            during breaks and whatnot. My all-time favorite's gotta be Minecraft, but
+                            some other ones I've played are Hollow Knight and Silksong. I also play
+                            a bunch of variant Sudoku, which is a niche based on the classic.
+                        </p>
+                        <p>
+                            I also play D&D! I started playing during sophomore year during the pandemic
+                            and have been playing with the same group ever since. Looking back on it, that's
+                            a really long time (we're approaching the five year anniversary soon!) and I'm
+                            really glad we've managed to keep it up during college. We're currently on our
+                            second large campaign, and that will probably wrap up within a year.
+                        </p>
+                    </hgroup>
+                </sliding-container>
             </section>
 
             <noscript>
@@ -80,6 +162,25 @@
                     </div>
                 </fieldset>
             </dialog>
+
+            <zoomed-pictures>
+                <dialog id="jarvsoo-dialog">
+                    <picture>
+                        <source type="image/avif" srcset="./media/img/avif/jarvsoo.avif" width="500">
+                        <img src="./media/img/avif/jarvsoo.jpg" alt="A picture looking out at a lake 
+                        with a large tree in the foreground" width="500" fetchpriority="low">
+                    </picture>
+                    <background-cover></background-cover>
+                </dialog>
+                <dialog id="dnd-dialog">
+                    <picture>
+                        <source type="image/avif" srcset="./media/img/avif/dnd.avif" width="500">
+                        <img src="./media/img/avif/dnd.jpg" alt="A picture of seven people, with me
+                        second furthest right" width="500" fetchpriority="low">
+                    </picture>
+                    <background-cover></background-cover>
+                </dialog>
+            </zoomed-pictures>
         </main>
         <footer>
             <small>

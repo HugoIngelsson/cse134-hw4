@@ -54,7 +54,7 @@ header {
 }
 
 nav {
-    z-index: 1; /* ensure rendered on top */
+    z-index: 3; /* ensure rendered on top */
     width: 100%;
     display: block;
     font-size: var(--nav-font-size);
@@ -230,7 +230,7 @@ main {
 sliding-container {
     display: flex;
     background-color: var(--item-background);
-    justify-content: center;
+    justify-content: space-around;
     
     position: relative;
     left: 50%;
@@ -301,6 +301,10 @@ labeled-image {
         transition: transform 0.2s ease-in-out;
     }
 
+    img:hover {
+        transform: scale(1.05);
+    }
+
     figcaption {
         position: absolute;
         width: 300px;
@@ -311,26 +315,43 @@ labeled-image {
     }
 }
 
-labeled-image img:hover {
-    transform: scale(1.05);
+img {
+    max-width: 100vw;
+    height: auto;
 }
 
 dialog {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    border-color: white;
+    top: 0;
+    left: 0;
 
     picture {
         display: flex;
     }
 
     img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        border-color: white;
+        box-shadow: 0 0 10px 4px #000A;
+
         max-height: 80vh;
         max-width: 90vw;
         height: auto;
+    }
+
+    background-cover {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #999A;
+        z-index: 6;
     }
 }
 
@@ -352,6 +373,14 @@ dialog {
 }
 
 :root:has(labeled-image#comp-prog-img:focus) dialog#comp-prog-dialog {
+    display: block;
+}
+
+:root:has(labeled-image#jarvsoo-img:focus) dialog#jarvsoo-dialog {
+    display: block;
+}
+
+:root:has(labeled-image#dnd-img:focus) dialog#dnd-dialog {
     display: block;
 }
 
