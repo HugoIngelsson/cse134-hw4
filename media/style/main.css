@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
+    color: var(--palette-color1);
 }
 
 header {
@@ -34,7 +35,12 @@ header {
     }
 
     nav {
-        height: calc(var(--nav-height) * var(--nav-items))
+        height: calc(var(--nav-height) * var(--nav-items));
+
+        border: 0;
+        border-bottom: 3px;
+        border-color: var(--palette-color1);
+        border-style: solid;
     }
 
     nav ul {
@@ -49,7 +55,7 @@ header {
 
 @media (hover: hover) {
     nav a:hover {
-        background-color: var(--nav-hover);
+        background-color: var(--palette-color3);
     }
 }
 
@@ -61,7 +67,7 @@ nav {
 
     ul {
         list-style-type: none;
-        background-color: var(--nav-background);
+        background-color: var(--palette-color2);
         height: 100%;
 
         li {
@@ -73,15 +79,20 @@ nav {
                 display: block;
                 align-content: center;
                 text-align: center;
-                background-color: var(--nav-item);
-                color: var(--nav-font-color);
+                background-color: var(--palette-color2);
+                color: var(--palette-color6);
                 text-decoration: none;
                 height: 100%;
                 padding: 0 16px;
             }
 
+            a:hover {
+                color: var(--palette-color1);
+            }
+
             a.active {
-                background-color: var(--nav-selected);
+                background-color: var(--palette-color3);
+                color: var(--palette-color1);
             }
 
             img {
@@ -213,13 +224,13 @@ nav {
 }
 
 body {
-    background-color: var(--body-background);
+    background-color: var(--palette-color1);
     overflow-x: hidden;
 }
 
 main {
     margin: 0 auto;
-    background-color: var(--main-background);
+    background-color: var(--palette-color2);
 
     display: flex;
     justify-content: center;
@@ -229,7 +240,7 @@ main {
 
 sliding-container {
     display: flex;
-    background-color: var(--item-background);
+    background-color: var(--palette-color5);
     justify-content: space-around;
     
     position: relative;
@@ -274,15 +285,16 @@ sliding-container hgroup {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: auto 1rem;
 }
 
 labeled-image {
     display: flex;
     width: 300px;
     margin: 2px 10px;
-    border-color: #ddd;
+    border-color: var(--palette-color3);
     border-width: 5px;
-    border-style: outset;
+    border-style: solid;
 
     height: fit-content;
     align-self: center;
@@ -311,7 +323,8 @@ labeled-image {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        background-color: var(--fig-text-background);
+        background-color: var(--palette-color3);
+        box-shadow: 0 2px 2px 1px var(--palette-color3);
     }
 }
 
@@ -336,7 +349,7 @@ dialog {
         transform: translate(-50%, -50%);
         z-index: 9;
         border-color: white;
-        box-shadow: 0 0 10px 4px #000A;
+        box-shadow: 0 0 10px 4px var(--palette-color3);
 
         max-height: 80vh;
         max-width: 90vw;
@@ -350,7 +363,8 @@ dialog {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #999A;
+        background-color: var(--palette-color1);
+        opacity: 0.75;
         z-index: 6;
     }
 }
@@ -452,5 +466,14 @@ iframe {
 }
 
 a {
-    color: var(--link-color);
+    color: var(--palette-color2);
+}
+
+a:hover {
+    color: var(--palette-color3);
+}
+
+hr {
+    border: none;
+    height: 0.5rem;
 }
