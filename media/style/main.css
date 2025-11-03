@@ -5,7 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
 }
 
 header {
@@ -372,6 +372,10 @@ dialog {
     labeled-image.tilt-right {
         transform: rotateZ(4deg);
     }
+
+    .hide-on-thick {
+        display: none;
+    }
 }
 
 @media (width < 700px) or (not (hover: hover)) {
@@ -406,6 +410,10 @@ dialog {
         figcaption {
             bottom: calc(0.5rem + 5px);
         }
+    }
+
+    .hide-on-thin {
+        display: none;
     }
 }
 
