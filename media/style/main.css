@@ -298,6 +298,7 @@ labeled-image {
     img {
         width: 300px;
         height: auto;
+        transition: transform 0.2s ease-in-out;
     }
 
     figcaption {
@@ -310,7 +311,51 @@ labeled-image {
     }
 }
 
-@media (width >= 700px) {
+labeled-image img:hover {
+    transform: scale(1.05);
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-color: white;
+
+    picture {
+        display: flex;
+    }
+
+    img {
+        max-height: 80vh;
+        max-width: 90vw;
+        height: auto;
+    }
+}
+
+/* Match images with their respective dialog boxes */
+:root:has(labeled-image#gb-start-img:focus) dialog#gb-start-dialog {
+    display: block;
+}
+
+:root:has(labeled-image#gb-pkg-img:focus) dialog#gb-pkg-dialog {
+    display: block;
+}
+
+:root:has(labeled-image#catan-img:focus) dialog#catan-dialog {
+    display: block;
+}
+
+:root:has(labeled-image#battlecode-img:focus) dialog#battlecode-dialog {
+    display: block;
+}
+
+:root:has(labeled-image#comp-prog-img:focus) dialog#comp-prog-dialog {
+    display: block;
+}
+
+@media (width >= 700px) and (hover: hover) {
     main {
         width: min(80%, 900px);
         padding: 1rem 2rem;
@@ -329,7 +374,7 @@ labeled-image {
     }
 }
 
-@media (width < 700px) {
+@media (width < 700px) or (not (hover: hover)) {
     main {
         width: 100%;
     }
@@ -343,6 +388,10 @@ labeled-image {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    pre {
+        width: 100vw;
     }
 
     labeled-image {

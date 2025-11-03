@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="A page showing off some of my coolest projects I've made">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
         <link rel="icon" type="image/x-icon" href="./media/favicon/favicon-32x32.png">
         <title>Hugo Ingelsson's Portfolio Site - Projects</title>
         <link rel="stylesheet" href="./media/style/main.css">
@@ -44,7 +45,7 @@
                         </p>
                     </sliding-container>
                     <sliding-container class="in-right out-left">
-                        <labeled-image class="tilt-left">
+                        <labeled-image class="tilt-left" tabindex="-1" id="gb-start-img">
                             <picture>
                                 <source type="image/avif" srcset="./media/img/avif/gameboy_start.avif" width="500">
                                 <img src="./media/img/png/gameboy_start.png" alt="Gameboy start screen" width="500">
@@ -67,7 +68,7 @@
                             so close to the computer-level functionality of a device and then 
                             have it function.
                         </p>
-                        <labeled-image class="tilt-right">
+                        <labeled-image class="tilt-right" tabindex="-1" id="gb-pkg-img">
                             <picture>
                                 <source type="image/avif" srcset="./media/img/avif/pk_gold.avif">
                                 <img src="./media/img/png/pk_gold.png" alt="Pokemon Gold">
@@ -91,7 +92,7 @@
                         </p>
                     </sliding-container>
                     <sliding-container class="in-right out-right">
-                        <labeled-image class="tilt-left">
+                        <labeled-image class="tilt-left" tabindex="-1" id="catan-img">
                             <picture>
                                 <source type="image/avif" srcset="./media/img/avif/catan.avif" width="500">
                                 <img src="./media/img/png/catan.png" alt="Catan" width="500">
@@ -211,7 +212,7 @@
                             power) they're allowed each round, meaning you not only have to manage actual in-game 
                             resources but also how efficiently the robots operate.
                         </p>
-                        <labeled-image class="tilt-right">
+                        <labeled-image class="tilt-right" tabindex="-1" id="battlecode-img">
                             <picture>
                                 <source type="image/avif" srcset="./media/img/avif/battlecode.avif" width="500">
                                 <img src="./media/img/jpg/battlecode.jpg" alt="Battlecode" width="500">
@@ -223,7 +224,7 @@
 
                 <article>
                     <sliding-container class="in-right out-left">
-                        <labeled-image class="tilt-left" id="comp-prog-pic">
+                        <labeled-image class="tilt-left" tabindex="-1" id="comp-prog-img">
                             <picture>
                                 <source type="image/avif" srcset="./media/img/avif/comp_prog.avif" width="500">
                                 <img src="/media/img/jpg/comp_prog.jpg" alt="Competitive Programming" width="500">
@@ -254,6 +255,38 @@
                     </sliding-container>
                 </article>
             </section>
+            <zoomed-pictures>
+                <dialog id="gb-start-dialog">
+                    <picture>
+                        <source type="image/avif" srcset="./media/img/avif/gameboy_start.avif" width="500">
+                        <img src="./media/img/avif/gameboy_start.jpg" alt="Battlecode" width="500">
+                    </picture>
+                </dialog>
+                <dialog id="gb-pkg-dialog">
+                    <picture>
+                        <source type="image/avif" srcset="./media/img/avif/pk_gold.avif" width="500">
+                        <img src="./media/img/jpg/pk_gold.jpg" alt="Battlecode" width="500">
+                    </picture>
+                </dialog>
+                <dialog id="catan-dialog">
+                    <picture>
+                        <source type="image/avif" srcset="./media/img/avif/catan.avif" width="500">
+                        <img src="./media/img/jpg/catan.jpg" alt="Battlecode" width="500">
+                    </picture>
+                </dialog>
+                <dialog id="battlecode-dialog">
+                    <picture>
+                        <source type="image/avif" srcset="./media/img/avif/battlecode.avif" width="500">
+                        <img src="./media/img/jpg/battlecode.jpg" alt="Battlecode" width="500">
+                    </picture>
+                </dialog>
+                <dialog id="comp-prog-dialog">
+                    <picture>
+                        <source type="image/avif" srcset="./media/img/avif/comp_prog.avif" width="500">
+                        <img src="./media/img/jpg/comp_prog.jpg" alt="Battlecode" width="500">
+                    </picture>
+                </dialog>
+            </zoomed-pictures>
         </main>
         <footer>
             <small>
