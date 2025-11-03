@@ -67,7 +67,7 @@ nav {
 
     ul {
         list-style-type: none;
-        background-color: var(--palette-color2, #106967);
+        background-color: var(--palette-color1, #106967);
         height: 100%;
 
         li {
@@ -79,8 +79,8 @@ nav {
                 display: block;
                 align-content: center;
                 text-align: center;
-                background-color: var(--palette-color2, #106967);
-                color: var(--palette-color6, #e8b953);
+                background-color: var(--palette-color1, #106967);
+                color: var(--palette-color5, #efca7c);
                 text-decoration: none;
                 height: 100%;
                 padding: 0 16px;
