@@ -337,9 +337,13 @@ labeled-image {
         transition: transform 0.2s ease-in-out;
     }
 
-    img:not([data-width-overwrite]) {
+    img {
         width: 300px;
         height: auto;
+    }
+
+    img[data-width-overwrite] {
+        width: 60vw;
     }
 
     img:hover {
