@@ -11,6 +11,8 @@ function init() {
         saveStorage(theme, palette);
     }
 
+    document.documentElement.style.setProperty(`--nav-items`, 5);
+
     loadStorage();
     createSettingsButtons();
     initListeners();
